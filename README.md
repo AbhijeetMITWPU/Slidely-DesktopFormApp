@@ -161,7 +161,7 @@ Slidely-DesktopFormApp is a Windows Desktop Application built with Visual Basic 
 
 ## Repository Links
 
-- [Frontend Repository](https://github.com/your-username/Slidely-DesktopFormApp)
+- [Frontend Repository](https://github.com/AbhijeetMITWPU/Slidely-DesktopFormApp)
 - [Backend Repository](https://github.com/AbhijeetMITWPU/Slidely-DesktopFormApp/tree/main/slidelybackend)
 
 ---
