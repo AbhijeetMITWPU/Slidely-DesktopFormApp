@@ -1,18 +1,26 @@
 [
   {
     "id": 1,
-    "name": "Abhijeet Singh",
-    "email": "abhis6102003@gmail.com",
-    "phone": "+919161511029",
-    "github_link": "https://github.com/johndoe",
-    "stopwatch_time": "00:00:34"
+    "name": "Abhijeet Singh rocker",
+    "email": "abhis.email@example.com",
+    "phone": "879876465",
+    "github_link": "https://github.com/updated-link",
+    "stopwatch_time": "01:00:00"
   },
   {
     "id": 2,
-    "name": "Meow Meow Nigga",
-    "email": "heheheh@gmail.com",
-    "phone": "91613131644",
+    "name": "meow meow nigga",
+    "email": "abhis6102@gmail.com",
+    "phone": "+916151499665",
     "github_link": "https://github.com/johndoe",
-    "stopwatch_time": "00:00:08"
+    "stopwatch_time": "00:00:43"
+  },
+  {
+    "id": 3,
+    "name": "Abhijeet Singh Yoyo",
+    "email": "abhis619@gmail.com",
+    "phone": "+19464974978",
+    "github_link": "https://github.com/updated-link",
+    "stopwatch_time": "00:00:39"
   }
 ]

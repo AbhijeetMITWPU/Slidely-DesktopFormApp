@@ -42,6 +42,7 @@
             btnNext = new Button();
             label1 = new Label();
             btnDelete = new Button();
+            btnUpdate = new Button();
             SuspendLayout();
             // 
             // lblName
@@ -74,7 +75,7 @@
             // lblStopwatch
             // 
             lblStopwatch.AutoSize = true;
-            lblStopwatch.Location = new Point(196, 282);
+            lblStopwatch.Location = new Point(196, 275);
             lblStopwatch.Name = "lblStopwatch";
             lblStopwatch.Size = new Size(116, 20);
             lblStopwatch.TabIndex = 3;
@@ -96,7 +97,7 @@
             txtStopwatchTime.Location = new Point(378, 275);
             txtStopwatchTime.Name = "txtStopwatchTime";
             txtStopwatchTime.ReadOnly = true;
-            txtStopwatchTime.Size = new Size(125, 27);
+            txtStopwatchTime.Size = new Size(264, 27);
             txtStopwatchTime.TabIndex = 5;
             // 
             // txtGithubLink
@@ -106,7 +107,7 @@
             txtGithubLink.Location = new Point(378, 223);
             txtGithubLink.Name = "txtGithubLink";
             txtGithubLink.ReadOnly = true;
-            txtGithubLink.Size = new Size(125, 27);
+            txtGithubLink.Size = new Size(264, 27);
             txtGithubLink.TabIndex = 6;
             // 
             // txtPhoneNumber
@@ -116,7 +117,7 @@
             txtPhoneNumber.Location = new Point(378, 179);
             txtPhoneNumber.Name = "txtPhoneNumber";
             txtPhoneNumber.ReadOnly = true;
-            txtPhoneNumber.Size = new Size(125, 27);
+            txtPhoneNumber.Size = new Size(264, 27);
             txtPhoneNumber.TabIndex = 7;
             // 
             // txtEmail
@@ -126,7 +127,7 @@
             txtEmail.Location = new Point(378, 134);
             txtEmail.Name = "txtEmail";
             txtEmail.ReadOnly = true;
-            txtEmail.Size = new Size(125, 27);
+            txtEmail.Size = new Size(264, 27);
             txtEmail.TabIndex = 8;
             // 
             // txtName
@@ -136,14 +137,14 @@
             txtName.Location = new Point(378, 85);
             txtName.Name = "txtName";
             txtName.ReadOnly = true;
-            txtName.Size = new Size(125, 27);
+            txtName.Size = new Size(264, 27);
             txtName.TabIndex = 9;
             // 
             // btnPrevious
             // 
             btnPrevious.BackColor = Color.Khaki;
             btnPrevious.FlatStyle = FlatStyle.Flat;
-            btnPrevious.Location = new Point(196, 367);
+            btnPrevious.Location = new Point(146, 367);
             btnPrevious.Name = "btnPrevious";
             btnPrevious.Size = new Size(166, 29);
             btnPrevious.TabIndex = 10;
@@ -155,7 +156,7 @@
             // 
             btnNext.BackColor = Color.CornflowerBlue;
             btnNext.FlatStyle = FlatStyle.Flat;
-            btnNext.Location = new Point(402, 367);
+            btnNext.Location = new Point(356, 367);
             btnNext.Name = "btnNext";
             btnNext.Size = new Size(166, 29);
             btnNext.TabIndex = 11;
@@ -176,19 +177,32 @@
             // 
             btnDelete.BackColor = Color.Red;
             btnDelete.FlatStyle = FlatStyle.Flat;
-            btnDelete.Location = new Point(611, 367);
+            btnDelete.Location = new Point(564, 367);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(126, 29);
+            btnDelete.Size = new Size(134, 29);
             btnDelete.TabIndex = 13;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = false;
             btnDelete.Click += btnDelete_Click;
             // 
+            // btnUpdate
+            // 
+            btnUpdate.BackColor = Color.LimeGreen;
+            btnUpdate.FlatStyle = FlatStyle.Flat;
+            btnUpdate.Location = new Point(730, 367);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(129, 29);
+            btnUpdate.TabIndex = 14;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
+            // 
             // ViewSubmissionsForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1039, 524);
+            Controls.Add(btnUpdate);
             Controls.Add(btnDelete);
             Controls.Add(label1);
             Controls.Add(btnNext);
@@ -226,5 +240,6 @@
         private Button btnNext;
         private Label label1;
         private Button btnDelete;
+        private Button btnUpdate;
     }
 }

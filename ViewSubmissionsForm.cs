@@ -140,5 +140,27 @@ namespace SlidelyFormApp
                 }
             }
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (submissions != null && currentIndex >= 0 && currentIndex < submissions.Count)
+            {
+                var submissionToUpdate = submissions[currentIndex];
+
+                // Create an instance of UpdateForm and pass the current submission data to it
+                UpdateForm updateForm = new UpdateForm(submissionToUpdate);
+
+                // Show the UpdateForm
+                updateForm.ShowDialog();
+
+                // After UpdateForm is closed, fetch updated submissions
+                FetchSubmissions();
+            }
+            else
+            {
+                MessageBox.Show("No submission to update.");
+            }
+        }
+
     }
 }

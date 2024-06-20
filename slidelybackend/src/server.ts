@@ -74,6 +74,42 @@ app.get('/read', (req: Request, res: Response) => {
   res.json(submissions);
 });
 
+// PUT route to update a submission by ID
+app.put('/submission/:id', (req: Request, res: Response) => {
+  const { id } = req.params;
+  const { name, email, phone, github_link, stopwatch_time } = req.body;
+
+  // Validate required fields
+  if (!name || !email || !phone || !github_link || !stopwatch_time) {
+    return res.status(400).json({ error: 'All fields are required' });
+  }
+
+  // Read current submissions from db.json
+  let submissions: Submission[] = JSON.parse(readFileSync(dbFilePath, 'utf8'));
+
+  // Find submission index by id
+  const indexToUpdate = submissions.findIndex((submission: Submission) => submission.id === parseInt(id));
+
+  if (indexToUpdate === -1) {
+    return res.status(404).json({ error: 'Submission not found' });
+  }
+
+  // Update submission with new data
+  submissions[indexToUpdate] = {
+    id: parseInt(id),
+    name,
+    email,
+    phone,
+    github_link,
+    stopwatch_time
+  };
+
+  // Write updated submissions back to db.json
+  writeFileSync(dbFilePath, JSON.stringify(submissions, null, 2), 'utf8');
+
+  res.json({ success: true });
+});
+
 // DELETE route to delete a submission by ID
 app.delete('/submission/:id', (req: Request, res: Response) => {
   const { id } = req.params;
