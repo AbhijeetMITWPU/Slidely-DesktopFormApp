@@ -1,9 +1,7 @@
 # Slidely-DesktopFormApp
 
 # Watch the Video
-
-[![Watch the video](https://img.youtube.com/vi/wJ0lkXLwtNM/maxresdefault.jpg)](https://youtu.be/wJ0lkXLwtNM)
-
+[![Watch the video](https://img.youtube.com/vi/vVRWyiCwFwU/maxresdefault.jpg)](https://youtu.be/vVRWyiCwFwU)
 
 ## Overview
 
