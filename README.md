@@ -1,5 +1,9 @@
 # Slidely-DesktopFormApp
-[Watch the screen recording](https://github.com/AbhijeetMITWPU/Slidely-DesktopFormApp/blob/main/Slidelyvideo.mp4)
+
+# Watch the Video
+
+[![Watch the video](https://img.youtube.com/vi/wJ0lkXLwtNM/maxresdefault.jpg)](https://youtu.be/wJ0lkXLwtNM)
+
 
 ## Overview
 
