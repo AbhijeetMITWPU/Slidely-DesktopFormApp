@@ -1,3 +1,4 @@
+
 # Slidely-DesktopFormApp
 
 # Watch the Video
@@ -33,8 +34,9 @@ Slidely-DesktopFormApp is a Windows Desktop Application built with Visual Basic 
 - **Endpoints**:
   - `/ping`: A GET request that always returns True.
   - `/submit`: A POST request to save new submissions.
-  - `/read`: A GET request to retrieve saved submissions by index.
-  - `/delete`: A DELETE request to remove a submission by index.
+  - `/read`: A GET request to retrieve all submissions.
+  - `/submission/:id`: A DELETE request to remove a submission by ID.
+  - `/submission/:id`: A PUT request to update a submission by ID.
 - **Data Storage**: Submissions are stored in a JSON file (`db.json`).
 
 ## Setup and Installation
@@ -72,7 +74,7 @@ Slidely-DesktopFormApp is a Windows Desktop Application built with Visual Basic 
    ```sh
    npm start
    ```
-   The server will run on `http://localhost:3000`.
+   The server will run on `http://localhost:5000`.
 
 ## Usage
 
@@ -105,7 +107,7 @@ Slidely-DesktopFormApp is a Windows Desktop Application built with Visual Basic 
 - **Description**: Health check endpoint.
 - **Response**: 
   ```json
-  true
+  { "success": true }
   ```
 
 ### /submit
@@ -115,49 +117,67 @@ Slidely-DesktopFormApp is a Windows Desktop Application built with Visual Basic 
 - **Request Body**:
   ```json
   {
-    "name": "John Doe",
-    "email": "john.doe@example.com",
+    "name": "Abhijeet  Singh",
+    "email": "abhi.doe@example.com",
     "phone": "123-456-7890",
     "github_link": "https://github.com/johndoe",
-    "stopwatch_time": 120
+    "stopwatch_time": "00:02:00"
   }
   ```
 - **Response**: 
   ```json
   {
-    "status": "success",
-    "message": "Submission saved."
+    "success": true
   }
   ```
 
 ### /read
 
 - **Method**: GET
-- **Description**: Retrieves a form entry by index.
-- **Query Parameter**:
-  - `index`: The zero-based index of the submission.
+- **Description**: Retrieves all form entries.
+- **Response**:
+  ```json
+  [
+    {
+      "id": 1,
+      "name": "Abhijeet Singh",
+      "email": "abhi.doe@example.com",
+      "phone": "123-456-7890",
+      "github_link": "https://github.com/johndoe",
+      "stopwatch_time": "00:02:00"
+    }
+  ]
+  ```
+
+### /submission/:id
+
+- **Method**: DELETE
+- **Description**: Deletes a form entry by ID.
 - **Response**:
   ```json
   {
-    "name": "John Doe",
-    "email": "john.doe@example.com",
-    "phone": "123-456-7890",
-    "github_link": "https://github.com/johndoe",
-    "stopwatch_time": 120
+    "success": true
   }
   ```
 
-### /delete
+### /submission/:id
 
-- **Method**: DELETE
-- **Description**: Deletes a form entry by index.
-- **Query Parameter**:
-  - `index`: The zero-based index of the submission.
+- **Method**: PUT
+- **Description**: Updates a form entry by ID.
+- **Request Body**:
+  ```json
+  {
+    "name": "Abhijeet Update",
+    "email": "abhis.doe@example.com",
+    "phone": "987-654-3210",
+    "github_link": "https://github.com/janedoe",
+    "stopwatch_time": "00:03:30"
+  }
+  ```
 - **Response**:
   ```json
   {
-    "status": "success",
-    "message": "Submission deleted."
+    "success": true
   }
   ```
 
@@ -165,5 +185,4 @@ Slidely-DesktopFormApp is a Windows Desktop Application built with Visual Basic 
 
 - [Frontend Repository](https://github.com/AbhijeetMITWPU/Slidely-DesktopFormApp)
 - [Backend Repository](https://github.com/AbhijeetMITWPU/Slidely-DesktopFormApp/tree/main/slidelybackend)
-
----
+```
