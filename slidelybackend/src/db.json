@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "Abhijeet Singh",
+    "email": "abhis6102003@gmail.com",
+    "phone": "+919161511029",
+    "github_link": "https://github.com/johndoe",
+    "stopwatch_time": "00:00:34"
+  },
+  {
+    "id": 2,
+    "name": "Meow Meow Nigga",
+    "email": "heheheh@gmail.com",
+    "phone": "91613131644",
+    "github_link": "https://github.com/johndoe",
+    "stopwatch_time": "00:00:08"
+  }
+]
